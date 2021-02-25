@@ -19,7 +19,7 @@ stages:
       runOnce:
         deploy:
           steps:
-            - script: echo Deploy at Dev env
+            - script: echo Deploy at Dev Env
     
 - stage: QaDeploy
   jobs:
@@ -29,7 +29,7 @@ stages:
       runOnce:
         deploy:
           steps:
-            - script: echo Deploy at QA env
+            - script: echo Deploy at QA Env
             
 
 #steps:
