@@ -30,4 +30,24 @@ stages:
        deploy:
         steps:
            - script: echo Deploy at QA env          
+
+- stage: STAGEEnv
+  jobs:
+  - deployment: StageDeployment
+    environment: Stage
+    strategy:
+     runOnce:
+       deploy:
+        steps:
+           - script: echo Deploy at Stage env
+  
+- stage: PRODEnv
+  jobs:
+  - deployment: PRODDeployment
+    environment: PROD
+    strategy:
+     runOnce:
+       deploy:
+        steps:
+           - script: echo Deploy at PROD env
         
