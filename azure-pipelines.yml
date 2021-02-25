@@ -11,7 +11,7 @@ stages:
     steps: 
     - bash: echo "Perform Build"
 
-- stage: Developer Environment
+- stage: Developer-Environment
   jobs:
   - deployment: DevDeployment
     environment: Dev
@@ -21,7 +21,7 @@ stages:
         steps:
            - script: echo Deploy at Dev env
 
-- stage: QA Environment
+- stage: QA-Environment
   jobs:
   - deployment: QADeployment
     environment: QA
